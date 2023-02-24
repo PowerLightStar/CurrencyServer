@@ -1,8 +1,8 @@
 package server
 
 import (
-	"GolangCurrencyMS/server/config"
-	"GolangCurrencyMS/server/internal/handler"
+	"GolangCurrencyMS/config"
+	"GolangCurrencyMS/internal/handler"
 	"fmt"
 	"net/http"
 
@@ -28,7 +28,7 @@ func NewServer(cfg *config.Config, ctrls ...handler.Controller) Server {
 func (s *server) Run() error {
 	// router, err := s.buildRouter()
 	// if err != nil {
-	// 	return err
+	// return err
 	// }
 
 	// srv := &http.Server{
@@ -39,9 +39,9 @@ func (s *server) Run() error {
 	// startupFailed := make(chan interface{}, 1)
 	// defer close(startupFailed)
 
-	// go func() {
+	// // go func() {
 
-	// }
+	// // }
 	return nil
 }
 

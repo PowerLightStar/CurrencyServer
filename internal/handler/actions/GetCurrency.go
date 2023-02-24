@@ -1,7 +1,7 @@
 package actions
 
 import (
-	base "GolangCurrencyMS/server/internal/handler"
+	base "GolangCurrencyMS/internal/handler"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
