@@ -41,7 +41,7 @@ func (c *GetCurrencyController) Handler() gin.HandlerFunc {
 			FeeCurrency: newSymbol.FeeCurrency,
 		}
 
-		ctx.JSON(http.StatusOK, gin.H{"status": true, "payload": newCurrency})
+		ctx.JSONP(http.StatusOK, newCurrency)
 	}
 }
 
