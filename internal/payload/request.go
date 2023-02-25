@@ -19,3 +19,7 @@ type SymbolRequest struct {
 type CurrencyRequest struct {
 	FullName string `json:"full_name"`
 }
+
+type Request interface {
+	TickerRequest | SymbolRequest | CurrencyRequest
+}

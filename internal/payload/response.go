@@ -1,13 +1,13 @@
 package payload
 
 type DataResponse struct {
-	Id          string `json:"id"`
-	FullName    string `json:"fullName"`
-	Ask         string `json:"ask"`
-	Bid         string `json:"bid"`
-	Last        string `json:"last"`
-	Open        string `json:"open"`
-	Low         string `json:"low"`
-	High        string `json:"high"`
-	FeeCurrency string `json:"feeCurrency"`
+	Id          string  `json:"id"`
+	FullName    string  `json:"fullName"`
+	Ask         float64 `json:"ask"`
+	Bid         float64 `json:"bid"`
+	Last        float64 `json:"last"`
+	Open        float64 `json:"open"`
+	Low         float64 `json:"low"`
+	High        float64 `json:"high"`
+	FeeCurrency string  `json:"feeCurrency"`
 }
