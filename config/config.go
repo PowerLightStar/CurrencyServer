@@ -25,6 +25,10 @@ func LoadConfig() (*Config, error) {
 	conf.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	conf.AutomaticEnv()
 
+	if err := conf.ReadInConfig(); err != nil {
+		return nil, err
+	}
+
 	c := &Config{}
 	err := conf.Unmarshal(c)
 

@@ -40,8 +40,7 @@ func (s *server) Run() error {
 	log.Printf("%d\n", s.config.App.Port)
 
 	srv := &http.Server{
-		// Addr:    fmt.Sprintf(":%d", s.config.App.Port),
-		Addr:    ":8080",
+		Addr:    fmt.Sprintf(":%d", s.config.App.Port),
 		Handler: router,
 	}
 
