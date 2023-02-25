@@ -11,7 +11,11 @@ type TickerRequest struct {
 	Volume_quote string `json:"volume_quote,omitempty"`
 }
 
-type CurrencyRequest struct {
+type SymbolRequest struct {
 	BaseCurrency string `json:"base_currency,omitempty"`
 	FeeCurrency  string `json:"fee_currency,omitempty"`
+}
+
+type CurrencyRequest struct {
+	FullName string `json:"full_name"`
 }
