@@ -2,6 +2,7 @@ package config
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"strings"
 
@@ -21,16 +22,18 @@ func LoadConfig() (*Config, error) {
 	fmt.Println(config_name)
 	conf.SetConfigFile(config_name)
 	conf.SetConfigType("yaml")
-	conf.SetEnvKeyReplacer(strings.NewReplacer(".", "-"))
+	conf.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	conf.AutomaticEnv()
 
 	c := &Config{}
 	err := conf.Unmarshal(c)
 
+	log.Println(c)
+
 	return c, err
 }
 
-const defaultEnv = "currencyMS"
+const defaultEnv = "dev"
 
 func getWebEnv() string {
 	env := os.Getenv("WEB_ENV")

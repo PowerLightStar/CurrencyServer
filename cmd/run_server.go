@@ -5,6 +5,7 @@ import (
 	act_handler "GolangCurrencyMS/internal/handler/actions"
 	"GolangCurrencyMS/internal/server"
 	"fmt"
+	"log"
 )
 
 func main() {
@@ -18,6 +19,8 @@ func main() {
 		appConfiguration,
 		act_handler.NewGetCurrencyController(),
 	)
+
+	log.Printf("runserver  %d\n", appConfiguration.App.Port)
 
 	if err = server.Run(); err != nil {
 		panic(err)
