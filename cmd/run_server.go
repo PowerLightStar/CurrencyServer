@@ -17,6 +17,7 @@ func main() {
 	server := server.NewServer(
 		appConfiguration,
 		act_handler.NewGetCurrencyController(),
+		act_handler.NewGetDashboard(),
 	)
 
 	if err = server.Run(); err != nil {
