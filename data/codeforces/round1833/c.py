@@ -1,0 +1,1 @@
+for s in[*open(0)][2::2]:a=*map(int,s.split()),;print('YNEOS'[~min(a)&any(x&1for x in a)::2])

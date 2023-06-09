@@ -1,0 +1,1 @@
+for s in[*open(0)][1:]:p='0';print(''.join(p:=(p,x)[x<'?']for x in s))

@@ -1,0 +1,1 @@
+for s in[*open(0)][2::2]:a,b=map(s[:-1].split,'<>');print(max(map(len,a+b))+1)
