@@ -1,1 +1,0 @@
-for s in[*open(0)][1:]:x,k=map(int,s.split());f=x%k<1;print(1+f,x-f,*[1]*f)
